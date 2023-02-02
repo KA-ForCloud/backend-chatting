@@ -21,7 +21,7 @@ pipeline {
                     echo "sshagent start"
                     sh '''
                         ssh -o StrictHostKeyChecking=no centos@210.109.62.6 uptime
-                        scp /var/jenkins_home/workspace/forCloud_Backend-chatting_Pipeline/build/libs/backend-chatting-0.0.1-SNAPSHOT.jar centos@210.109.62.6:/home/centos/Backend-chatting
+                        scp /var/jenkins_home/workspace/forCloud_Backend-chatting_Pipeline/build/libs/chat-0.0.1-SNAPSHOT.jar centos@210.109.62.6:/home/centos/Backend-chatting
                         ssh -t centos@210.109.62.6 ./deploy1.sh
                     '''
                     echo "Success"
